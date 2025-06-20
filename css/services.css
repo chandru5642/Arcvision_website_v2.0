@@ -1,0 +1,134 @@
+/* SERVICES PAGE */
+
+/* Service Sections */
+.service {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 1rem;
+
+  /* animate */
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  will-change: opacity, transform;
+}
+.service.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.service-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+
+  /* animate */
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  will-change: opacity, transform;
+}
+.service-content.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.service-content.left {
+  flex-direction: row;
+}
+
+.service-content.right {
+  flex-direction: row;
+}
+
+.service-text {
+  flex: 1;
+  min-width: 250px;
+
+  /* animate */
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  will-change: opacity, transform;
+}
+.service-text.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.service-text h2 {
+  font-size: 2rem;
+  color: var(--green-dark);
+  margin-bottom: 1rem;
+}
+
+.service-text p {
+  font-size: 1rem;
+  color: black;
+}
+
+.service-image {
+  flex: 1;
+  min-width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* animate */
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  will-change: opacity, transform;
+}
+.service-image.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.service-image img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Animate on scroll - fade and slide up */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  will-change: opacity, transform;
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .service-content {
+    flex-direction: column !important;
+    text-align: center;
+  }
+
+  .service-content.left {
+    flex-direction: column !important;
+  }
+
+  .service-content.right {
+    flex-direction: column-reverse !important;
+  }
+
+  .service-text,
+  .service-image {
+    width: 100%;
+  }
+
+  .service-text h2 {
+    font-size: 1.6rem;
+  }
+}
+
