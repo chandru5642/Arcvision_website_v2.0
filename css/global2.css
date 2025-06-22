@@ -142,13 +142,14 @@ ul {
   text-decoration: none;
   font-size: 1rem;
   color: var(--text-dark);
+  font-weight: 500;
   white-space: nowrap; /* prevent "News & Blog" line break */
 }
 
 .nav-menu a:hover,
 .nav-menu a.active {
   color: var(--green-dark);
-  font-weight: 700;
+
 }
 
 /* Burger menu (mobile only) */
