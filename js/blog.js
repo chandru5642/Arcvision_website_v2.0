@@ -9,3 +9,13 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.15 });
 
 elements.forEach(el => observer.observe(el));
+
+function scrollArticles(direction) {
+  const wrapper = document.getElementById('articlesWrapper');
+  const scrollAmount = 340; // Adjust this depending on your card width + gap
+
+  if (direction === 'left') {
+    wrapper.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+  } else if (direction === 'right') {
+    wrapper.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+  }}

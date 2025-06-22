@@ -576,8 +576,16 @@
 .carousel-container {
   position: relative;
   overflow: hidden;
-  max-width: 1220px;
+  max-width: 1400px;
   margin: 0 auto;
+  flex: 3;
+  min-width: 300px;
+  
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  overflow: hidden;
+  padding: 2rem;
 }
 
 .carousel-track {
